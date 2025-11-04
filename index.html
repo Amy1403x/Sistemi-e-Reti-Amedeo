@@ -3,160 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Data Link Layer - Strato Data Link</title>
+    <title>Quiz Interattivo - Strato Data Link</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">📚 Quiz Data Link</div>
-            <ul class="nav-menu">
-                <li><a href="#" class="nav-link" onclick="goHome()">Home</a></li>
-                <li><a href="#" class="nav-link" onclick="goAbout()">Chi Siamo</a></li>
-                <li><a href="#" class="nav-link" onclick="goQuiz()">Quiz</a></li>
-                <li><a href="#" class="nav-link" onclick="goLeaderboard()">🏆 Classifica</a></li>
-                <li><a href="#" class="nav-link" onclick="goMaterials()">📚 Materiali</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- HOME PAGE -->
-    <section id="home" class="page active">
-        <div class="hero">
-            <h1>Quiz Interattivo - Strato Data Link</h1>
-            <p class="subtitle">In collaborazione con Perplexity AI Labs</p>
-            <p class="description">Metti alla prova le tue conoscenze su IEEE 802, Ethernet, Power over Ethernet e Wireshark!</p>
-            <div class="buttons">
-                <button class="btn btn-primary" onclick="goQuiz()">🚀 Inizia Quiz</button>
-                <button class="btn btn-secondary" onclick="goLeaderboard()">🏆 Vedi Classifica</button>
+    <!-- Landing Page -->
+    <section id="landing" class="section active">
+        <div class="container">
+            <nav class="nav">
+                <button id="aboutNavBtn" class="nav-link">Chi Siamo</button>
+                <button id="materialsNavBtn" class="nav-link">📚 Materiale di Studio</button>
+            </nav>
+            <div class="hero">
+                <h1 class="hero-title">Quiz Interattivo</h1>
+                <h2 class="hero-subtitle">Strato Data Link</h2>
+                <p class="hero-tagline">In collaborazione con Perplexity AI Labs</p>
+                <p class="hero-description">
+                    Testa la tua conoscenza su Ethernet, Power over Ethernet, indirizzamento MAC, Wireshark e concetti del Data Link Layer. 
+                    15 domande accuratamente create che vanno dal livello base a quello avanzato.
+                </p>
+                <button id="startQuizBtn" class="btn btn-primary btn-large">
+                    Inizia Quiz
+                    <span class="btn-icon">→</span>
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- ABOUT PAGE -->
-    <section id="about" class="page">
-        <div class="about-container">
-            <h2>Chi Siamo</h2>
+    <!-- Chi Siamo Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <button id="backFromAboutBtn" class="btn btn-secondary">
+                <span class="btn-icon">←</span> Indietro
+            </button>
             <div class="about-content">
-                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Amedeo" alt="Amedeo" class="profile-pic">
-                <div class="about-text">
-                    <h3>Questo Progetto</h3>
-                    <p>Questo progetto è stato creato in collaborazione tra <strong>Perplexity AI</strong> e <strong>Amedeo</strong>, studente di informatica della classe 4C.</p>
-                    
-                    <h4>Chi è Perplexity AI?</h4>
-                    <p>Perplexity AI è una piattaforma di ricerca avanzata che utilizza:</p>
-                    <ul>
-                        <li><strong>DeepSearch:</strong> Ricerca web avanzata con sintesi AI</li>
-                        <li><strong>Labs Pro:</strong> Funzionalità sperimentali e modelli avanzati</li>
-                        <li><strong>Citation Management:</strong> Fonti sempre citate e verificate</li>
-                    </ul>
-                    
-                    <h4>Lo Scopo</h4>
-                    <p>Amedeo ha richiesto la creazione di questo quiz interattivo per insegnare i concetti del Data Link Layer in modo innovativo, coinvolgente e divertente. Il quiz include:</p>
-                    <ul>
-                        <li>15 domande tecniche accurate</li>
-                        <li>Feedback immediato e visivo</li>
-                        <li>Una leaderboard dove tutti possono vedere i punteggi</li>
-                        <li>Un'esperienza di apprendimento moderna</li>
-                    </ul>
-                    
-                    <p><em>Questo è uno strumento di apprendimento completamente gratuito e open.</em></p>
+                <h1 class="section-title">Chi Siamo</h1>
+                <div class="about-card">
+                    <div class="profile-section">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Amedeo" alt="Amedeo" class="profile-image">
+                        <h3 class="profile-name">Richiesto da Amedeo</h3>
+                    </div>
+                    <h3 class="about-subtitle">Un Progetto in Collaborazione</h3>
+                    <p class="about-text">
+                        Questo progetto è stato creato in collaborazione tra Perplexity AI e Amedeo.
+                    </p>
+                    <p class="about-text">
+                        <strong>Perplexity AI</strong> è una piattaforma di ricerca avanzata che utilizza DeepSearch, Labs Pro e sintesi AI per fornire informazioni accurate e citate. È uno strumento potente per la ricerca e l'apprendimento, combinando modelli linguistici avanzati con capacità di ricerca web in tempo reale.
+                    </p>
+                    <p class="about-text">
+                        <strong>Amedeo</strong>, studente di informatica, ha richiesto la creazione di questo quiz interattivo per insegnare i concetti del Data Link Layer in modo innovativo e coinvolgente. L'obiettivo è rendere l'apprendimento della rete divertente e memorabile.
+                    </p>
+                    <p class="about-text">
+                        Insieme abbiamo sviluppato <strong>15 domande tecniche</strong> accuratamente verificate per testare la comprensione di Ethernet, Power over Ethernet, Wireshark e MAC addressing. Questo quiz è uno strumento di apprendimento interattivo completamente gratuito e open.
+                    </p>
                 </div>
             </div>
-            <button class="btn btn-secondary" onclick="goHome()">← Torna a Home</button>
         </div>
     </section>
 
-    <!-- QUIZ PAGE -->
-    <section id="quiz" class="page">
-        <div id="quiz-start" class="quiz-start">
-            <h2>Inizia il Quiz</h2>
-            <p>Inserisci il tuo nome per iniziare il quiz!</p>
-            <input type="text" id="username" placeholder="Il tuo nome" class="input-field">
-            <button class="btn btn-primary" onclick="startQuiz()">Inizia Quiz</button>
-            <button class="btn btn-secondary" onclick="goHome()">← Indietro</button>
+    <!-- Materiale di Studio Section -->
+    <section id="materials" class="section">
+        <div class="container">
+            <button id="backFromMaterialsBtn" class="btn btn-secondary">
+                <span class="btn-icon">←</span> Indietro
+            </button>
+            <div class="materials-content">
+                <h1 class="section-title">📚 Materiale di Studio</h1>
+                <div class="materials-card">
+                    <div class="coming-soon">
+                        <div class="coming-soon-icon">🚧</div>
+                        <h3 class="coming-soon-title">In arrivo...</h3>
+                        <p class="coming-soon-text">
+                            Presto disponibile - In questa sezione verranno caricati i materiali di studio, dispense, video tutorial, link utili e risorse aggiuntive per approfondire gli argomenti del quiz.
+                        </p>
+                        <p class="coming-soon-subtitle">
+                            Qui troverai tutto il necessario per approfondire la tua conoscenza su:
+                        </p>
+                        <ul class="coming-soon-list">
+                            <li>Ethernet e struttura dei frame</li>
+                            <li>Power over Ethernet (PoE)</li>
+                            <li>Indirizzamento MAC</li>
+                            <li>Wireshark e analisi di rete</li>
+                            <li>Data Link Layer e protocolli</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div id="quiz-container" class="quiz-container" style="display:none;">
+    <!-- Quiz Section -->
+    <section id="quiz" class="section">
+        <div class="container">
             <div class="quiz-header">
-                <div class="progress-bar">
-                    <div id="progress-fill" class="progress-fill"></div>
+                <h2 class="quiz-title">Quiz Strato Data Link</h2>
+                <button id="aboutFromQuizBtn" class="btn btn-outline btn-small">Chi Siamo</button>
+            </div>
+
+            <!-- Name Input -->
+            <div id="nameInput" class="name-input-container">
+                <div class="card">
+                    <h3 class="card-title">Prima di iniziare...</h3>
+                    <p class="card-text">Inserisci il tuo nome per iniziare il quiz</p>
+                    <input type="text" id="userName" class="form-control" placeholder="Il tuo nome" maxlength="50">
+                    <button id="beginQuizBtn" class="btn btn-primary">Inizia Quiz</button>
                 </div>
-                <p id="question-counter" class="question-counter"></p>
             </div>
 
-            <div class="question-box">
-                <h3 id="question-text"></h3>
-                <div id="options-container" class="options-container"></div>
-            </div>
+            <!-- Quiz Interface -->
+            <div id="quizInterface" class="quiz-interface hidden">
+                <div class="progress-container">
+                    <div class="progress-info">
+                        <span id="questionCounter">Domanda 1 di 15</span>
+                        <span id="difficultyBadge" class="difficulty-badge">Facile</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                </div>
 
-            <div class="quiz-buttons">
-                <button class="btn btn-secondary" id="prev-btn" onclick="previousQuestion()" style="display:none;">← Precedente</button>
-                <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" style="display:none;">Prossima →</button>
+                <div class="question-card">
+                    <h3 id="questionText" class="question-text"></h3>
+                    <div id="optionsContainer" class="options-container"></div>
+                    <div id="feedbackContainer" class="feedback-container hidden"></div>
+                    <div id="explanationContainer" class="explanation-container hidden"></div>
+                </div>
+
+                <div class="quiz-navigation">
+                    <button id="prevBtn" class="btn btn-secondary" disabled>
+                        <span class="btn-icon">←</span> Precedente
+                    </button>
+                    <button id="nextBtn" class="btn btn-primary" disabled>
+                        Prossima <span class="btn-icon">→</span>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- RESULTS PAGE -->
-    <section id="results" class="page">
-        <div class="results-container">
-            <h2>I Tuoi Risultati</h2>
-            <div id="score-display" class="score-display"></div>
-            <p id="message-text" class="message-text"></p>
-            <button class="btn btn-primary" id="save-btn" onclick="saveToLeaderboard()">💾 Salva in Classifica</button>
-            <button class="btn btn-secondary" onclick="goLeaderboard()">🏆 Vedi Classifica</button>
-            <button class="btn btn-secondary" onclick="goQuiz()">Ricomincia Quiz</button>
-            <button class="btn btn-secondary" onclick="goHome()">← Home</button>
-        </div>
-    </section>
+    <!-- Results Section -->
+    <section id="results" class="section">
+        <div class="container">
+            <div class="results-container">
+                <h2 class="results-title">Quiz Completato!</h2>
+                <div class="score-display">
+                    <div class="score-circle">
+                        <div id="scoreNumber" class="score-number">0</div>
+                        <div class="score-total">/ 15</div>
+                    </div>
+                    <div id="scorePercentage" class="score-percentage">0%</div>
+                    <p id="performanceMessage" class="performance-message"></p>
+                </div>
 
-    <!-- LEADERBOARD PAGE -->
-    <section id="leaderboard" class="page">
-        <div class="leaderboard-container">
-            <h2>🏆 Classifica - Top 10</h2>
-            <p class="leaderboard-subtitle">I migliori punteggi del quiz</p>
-            
-            <div id="leaderboard-loading" class="loading">Caricamento classifica...</div>
-            
-            <table id="leaderboard-table" class="leaderboard-table" style="display:none;">
-                <thead>
-                    <tr>
-                        <th>Posizione</th>
-                        <th>Nome</th>
-                        <th>Punteggio</th>
-                        <th>Percentuale</th>
-                        <th>Data</th>
-                    </tr>
-                </thead>
-                <tbody id="leaderboard-body">
-                </tbody>
-            </table>
+                <div class="user-info">
+                    <span class="user-label">Partecipante:</span>
+                    <span id="resultUserName" class="user-name"></span>
+                </div>
 
-            <div id="leaderboard-error" class="error-message" style="display:none;">
-                Impossibile caricare la classifica. Riprova tra qualche secondo.
+                <div class="category-breakdown">
+                    <h3 class="breakdown-title">Prestazioni per Categoria</h3>
+                    <div id="categoryResults" class="category-results"></div>
+                </div>
+
+                <div class="results-actions">
+                    <button id="saveResultsBtn" class="btn btn-primary">
+                        <span class="btn-icon">💾</span> Salva Risultati
+                    </button>
+                    <button id="shareResultsBtn" class="btn btn-secondary">
+                        <span class="btn-icon">📋</span> Condividi Risultati
+                    </button>
+                    <button id="retakeQuizBtn" class="btn btn-outline">
+                        <span class="btn-icon">🔄</span> Ricomincia Quiz
+                    </button>
+                </div>
             </div>
-
-            <button class="btn btn-secondary" onclick="refreshLeaderboard()">🔄 Aggiorna Classifica</button>
-            <button class="btn btn-secondary" onclick="goQuiz()">← Fai il Quiz</button>
-            <button class="btn btn-secondary" onclick="goHome()">Home</button>
         </div>
     </section>
 
-    <!-- MATERIALS PAGE -->
-    <section id="materials" class="page">
-        <div class="materials-container">
-            <h2>📚 Materiale di Studio</h2>
-            <p class="materials-subtitle">In arrivo...</p>
-            <div class="materials-placeholder">
-                <p>📖 Presto disponibile</p>
-                <p>In questa sezione verranno caricati i materiali di studio, dispense, video tutorial e risorse aggiuntive per approfondire gli argomenti del quiz.</p>
-            </div>
-            <button class="btn btn-secondary" onclick="goHome()">← Home</button>
-        </div>
-    </section>
-
-    <script src="config.js"></script>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
