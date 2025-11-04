@@ -1,10 +1,10 @@
-// Quiz data
+// Dati del quiz
 const quizData = [
   {
     id: 1,
-    difficulty: 'easy',
-    category: 'Ethernet Frame Structure',
-    question: 'What does MAC stand for?',
+    difficulty: 'facile',
+    category: 'Struttura Frame Ethernet',
+    question: 'Cosa significa MAC?',
     options: [
       'Media Access Control',
       'Machine Address Component',
@@ -12,168 +12,168 @@ const quizData = [
       'Memory Allocation Code'
     ],
     correct: 0,
-    explanation: "MAC stands for Media Access Control - it's the protocol that controls access to the physical network medium and manages hardware addresses."
+    explanation: 'MAC sta per Media Access Control, il protocollo che controlla l\'accesso al mezzo fisico e gestisce gli indirizzi hardware.'
   },
   {
     id: 2,
-    difficulty: 'easy',
-    category: 'MAC Addressing',
-    question: 'How many bytes is a MAC address?',
-    options: ['4 bytes', '6 bytes', '8 bytes', '12 bytes'],
+    difficulty: 'facile',
+    category: 'Indirizzamento MAC',
+    question: 'Quanti byte è un indirizzo MAC?',
+    options: ['4 byte', '6 byte', '8 byte', '12 byte'],
     correct: 1,
-    explanation: 'A MAC address is 48 bits (6 bytes), usually written as AA:BB:CC:DD:EE:FF in hexadecimal notation.'
+    explanation: 'Un indirizzo MAC è composto da 48 bit (6 byte), solitamente scritto come AA:BB:CC:DD:EE:FF in notazione esadecimale.'
   },
   {
     id: 3,
-    difficulty: 'easy',
-    category: 'Ethernet Frame Structure',
-    question: 'What is the minimum payload size in an Ethernet frame?',
-    options: ['32 bytes', '46 bytes', '64 bytes', '128 bytes'],
+    difficulty: 'facile',
+    category: 'Struttura Frame Ethernet',
+    question: 'Qual è la dimensione minima del payload in un frame Ethernet?',
+    options: ['32 byte', '46 byte', '64 byte', '128 byte'],
     correct: 1,
-    explanation: 'The minimum payload is 46 bytes. If data is smaller, padding is added to ensure minimum frame size of 64 bytes.'
+    explanation: 'Il payload minimo è 46 byte. Se i dati sono inferiori, viene aggiunto padding per garantire la dimensione minima del frame.'
   },
   {
     id: 4,
-    difficulty: 'easy',
+    difficulty: 'facile',
     category: 'Power over Ethernet',
-    question: 'Which PoE standard provides 30W of power?',
+    question: 'Quale standard PoE fornisce 30W di potenza?',
     options: ['802.3af', '802.3at', '802.3bt Type 3', '802.3bt Type 4'],
     correct: 1,
-    explanation: '802.3at (PoE+) provides 30W. 802.3af provides 15.4W, and 802.3bt Type 3/4 provide 60W and 100W respectively.'
+    explanation: '802.3at (PoE+) fornisce 30W. 802.3af fornisce 15.4W, mentre 802.3bt Type 3 e Type 4 forniscono 60W e 100W rispettivamente.'
   },
   {
     id: 5,
-    difficulty: 'easy',
+    difficulty: 'facile',
     category: 'Wireshark',
-    question: 'What is Wireshark used for?',
+    question: 'A cosa serve Wireshark?',
     options: [
-      'Compressing network packets',
-      'Encrypting network traffic',
-      'Capturing and analyzing network packets',
-      'Routing network traffic'
+      'Comprimere i pacchetti',
+      'Crittografare i dati',
+      'Catturare e analizzare il traffico di rete',
+      'Instradare il traffico'
     ],
     correct: 2,
-    explanation: 'Wireshark is a network protocol analyzer used to capture and display network traffic in real-time, allowing detailed examination of packets.'
+    explanation: 'Wireshark è un analizzatore di protocolli di rete usato per catturare e visualizzare il traffico di rete in tempo reale.'
   },
   {
     id: 6,
-    difficulty: 'medium',
+    difficulty: 'media',
     category: 'Power over Ethernet',
-    question: 'Why does PoE 802.3at use pairs 3 and 4 for power transmission?',
+    question: 'Perché PoE 802.3at usa le coppie 3 e 4 per la trasmissione della potenza?',
     options: [
-      "Because pairs 1 and 2 carry data and shouldn't be used",
-      'Because pairs 3 and 4 are thicker',
-      "Because it's more efficient",
-      'Because pairs 1 and 2 are reserved'
+      'Perché le coppie 1 e 2 trasportano dati e non devono essere disturbate',
+      'Perché le coppie 3 e 4 sono più spesse',
+      'Perché è più efficiente',
+      'Perché le coppie 1 e 2 sono riservate dal protocollo'
     ],
     correct: 0,
-    explanation: 'PoE uses spare pairs (3 and 4) to avoid interference with data transmission on pairs 1 and 2, allowing both data and power on one cable.'
+    explanation: 'PoE usa le coppie libere (3 e 4) per evitare interferenze con la trasmissione dati sulle coppie 1 e 2, permettendo dati e potenza sullo stesso cavo.'
   },
   {
     id: 7,
-    difficulty: 'medium',
-    category: 'Ethernet Frame Structure',
-    question: 'What does the FCS (Frame Check Sequence) field detect?',
+    difficulty: 'media',
+    category: 'Struttura Frame Ethernet',
+    question: 'Cosa rileva il campo FCS (Frame Check Sequence)?',
     options: [
-      'The source MAC address',
-      'Transmission errors in the frame',
-      'The frame type',
-      'The payload length'
+      'L\'indirizzo MAC sorgente',
+      'Gli errori di trasmissione nel frame',
+      'Il tipo di frame',
+      'La lunghezza del payload'
     ],
     correct: 1,
-    explanation: 'FCS uses CRC-32 to detect transmission errors. It can detect 100% of 1 and 2-bit errors and 99.9999997% of other errors.'
+    explanation: 'FCS utilizza CRC-32 per rilevare errori di trasmissione con una precisione straordinaria: rileva il 100% degli errori a 1 e 2 bit, e il 99.9999997% di tutti gli altri errori.'
   },
   {
     id: 8,
-    difficulty: 'medium',
-    category: 'MAC Addressing',
-    question: 'What do the first 3 bytes of a MAC address represent?',
+    difficulty: 'media',
+    category: 'Indirizzamento MAC',
+    question: 'Cosa rappresentano i primi 3 byte di un indirizzo MAC?',
     options: [
-      'The device serial number',
-      'The Organizationally Unique Identifier (OUI) - manufacturer ID',
-      'The network subnet',
-      'The device type'
+      'Il numero seriale del dispositivo',
+      'L\'Organizationally Unique Identifier (OUI) - ID del produttore',
+      'La subnet di rete',
+      'Il tipo di dispositivo'
     ],
     correct: 1,
-    explanation: 'The first 3 bytes (24 bits) form the OUI, identifying the manufacturer. For example, CC:46:D6 identifies Cisco devices.'
+    explanation: 'I primi 3 byte (24 bit) formano l\'OUI, identificando il produttore. Ad esempio: CC:46:D6 identifica i dispositivi Cisco, 3C:5A:B4 identifica Google.'
   },
   {
     id: 9,
-    difficulty: 'medium',
+    difficulty: 'media',
     category: 'Wireshark',
-    question: 'In Wireshark, which filter would you use to see only ARP traffic?',
+    question: 'In Wireshark, quale filtro useresti per visualizzare solo il traffico ARP?',
     options: ['eth', 'tcp', 'arp', 'ip.src'],
     correct: 2,
-    explanation: "The 'arp' filter displays only Address Resolution Protocol frames, which are used to map IP addresses to MAC addresses."
+    explanation: 'Il filtro \'arp\' visualizza solo i frame di Address Resolution Protocol, usati per mappare indirizzi IP a indirizzi MAC sulla rete locale.'
   },
   {
     id: 10,
-    difficulty: 'medium',
+    difficulty: 'media',
     category: 'Data Link Layer',
-    question: 'What is the primary function of the LLC sublayer?',
+    question: 'Qual è la funzione primaria del sottolivello LLC?',
     options: [
-      'Access control to the physical medium',
-      'Framing, flow control, and error checking',
-      'Routing packets',
-      'Encrypting data'
+      'Controllo di accesso al mezzo fisico',
+      'Framing, controllo di flusso e verifica errori',
+      'Instradamento pacchetti',
+      'Crittografia dati'
     ],
     correct: 1,
-    explanation: 'LLC (Logical Link Control) provides framing, flow control, and error checking services to the upper layers.'
+    explanation: 'LLC (Logical Link Control) fornisce servizi di framing, controllo di flusso e verifica errori ai livelli superiori del modello OSI.'
   },
   {
     id: 11,
-    difficulty: 'hard',
-    category: 'Ethernet Evolution',
-    question: 'How many times has Ethernet bandwidth increased from 1983 to 2019?',
-    options: ['1,000 times', '10,000 times', '40,000 times', '400,000 times'],
+    difficulty: 'difficile',
+    category: 'Evoluzione Ethernet',
+    question: 'Di quante volte è aumentata la larghezza di banda di Ethernet dal 1983 al 2019?',
+    options: ['1.000 volte', '10.000 volte', '40.000 volte', '400.000 volte'],
     correct: 2,
-    explanation: 'From 10 Mbps (1983) to 400 Gbps (2019), Ethernet increased 40,000x in speed - an extraordinary achievement in networking.'
+    explanation: 'Da 10 Mbps (1983) a 400 Gbps (2019), Ethernet è aumentato di 40.000 volte in velocità - un risultato straordinario in 36 anni!'
   },
   {
     id: 12,
-    difficulty: 'hard',
-    category: 'Network Security',
-    question: 'How could you use Wireshark to detect MAC spoofing on a network?',
+    difficulty: 'difficile',
+    category: 'Sicurezza di Rete',
+    question: 'Come potresti usare Wireshark per rilevare il MAC spoofing su una rete?',
     options: [
-      'By looking at the timestamp field',
-      "By monitoring for MAC addresses that don't match known device OUIs",
-      'By checking the frame size',
-      'By analyzing the payload'
+      'Guardando il campo timestamp',
+      'Monitorando indirizzi MAC che non corrispondono agli OUI noti',
+      'Controllando la dimensione del frame',
+      'Analizzando il payload'
     ],
     correct: 1,
-    explanation: 'You can detect MAC spoofing by identifying MAC addresses with impossible OUI values or comparing against known legitimate MAC addresses.'
+    explanation: 'Puoi rilevare il MAC spoofing identificando indirizzi MAC con valori OUI impossibili o confrontandoli con indirizzi MAC legittimi noti nel tuo inventario di rete.'
   },
   {
     id: 13,
-    difficulty: 'hard',
+    difficulty: 'difficile',
     category: 'Power over Ethernet',
-    question: 'What would be the estimated PoE power capacity in 2032 if it doubles every 7 years from 100W in 2018?',
+    question: 'Quale sarebbe la capacità di potenza PoE stimata nel 2032 se raddoppia ogni 7 anni da 100W nel 2018?',
     options: ['200W', '400W', '800W', '1600W'],
     correct: 3,
-    explanation: 'From 100W (2018) → 200W (2025) → 400W (2032). Following exponential growth pattern, it should reach ~800W by 2032, closer to 1600W by 2039.'
+    explanation: 'Da 100W (2018) → 200W (2025) → 400W (2032). Seguendo il pattern di crescita esponenziale, potrebbe raggiungere ~1600W entro il 2039.'
   },
   {
     id: 14,
-    difficulty: 'hard',
-    category: 'Ethernet Frame Structure',
-    question: 'In Ethernet II format, what does a Type field value of 0x0800 indicate?',
-    options: ['ARP protocol', 'IPv4 protocol', 'TCP protocol', 'LLC protocol'],
+    difficulty: 'difficile',
+    category: 'Struttura Frame Ethernet',
+    question: 'Nel formato Ethernet II, cosa indica un valore del campo Type di 0x0800?',
+    options: ['Protocollo ARP', 'Protocollo IPv4', 'Protocollo TCP', 'Protocollo LLC'],
     correct: 1,
-    explanation: '0x0800 in the Type field indicates that the frame contains IPv4 data. 0x0806 would indicate ARP.'
+    explanation: '0x0800 nel campo Type indica che il frame contiene dati IPv4. 0x0806 indicherebbe ARP, 0x86DD indicherebbe IPv6.'
   },
   {
     id: 15,
-    difficulty: 'hard',
-    category: 'Network Analysis',
-    question: 'Why can HTTPS encryption still leak metadata visible in Wireshark captures?',
+    difficulty: 'difficile',
+    category: 'Analisi di Rete',
+    question: 'Perché la crittografia HTTPS può comunque far trapelare metadati visibili in Wireshark?',
     options: [
-      'Because HTTPS is not actually secure',
-      'Because packets are fully decrypted automatically',
-      'Because metadata like IP addresses, ports, and timing patterns are visible even though payload is encrypted',
-      'Because Wireshark has special decryption capabilities'
+      'Perché HTTPS non è veramente sicuro',
+      'Perché i pacchetti vengono decrittati automaticamente',
+      'Perché indirizzi IP, porte e pattern temporali rimangono visibili anche se il payload è crittato',
+      'Perché Wireshark ha capacità di decrittazione speciale'
     ],
     correct: 2,
-    explanation: 'Although HTTPS encrypts the payload, metadata remains visible: source/destination IPs, ports, packet sizes, and timing patterns can reveal browsing habits.'
+    explanation: 'Anche con HTTPS, i metadati rimangono visibili: indirizzi IP sorgente/destinazione, porte, dimensioni pacchetti e pattern temporali possono rivelare abitudini di navigazione.'
   }
 ];
 
@@ -191,6 +191,7 @@ let appState = {
 const sections = {
   landing: document.getElementById('landing'),
   about: document.getElementById('about'),
+  materials: document.getElementById('materials'),
   quiz: document.getElementById('quiz'),
   results: document.getElementById('results')
 };
@@ -199,10 +200,14 @@ const elements = {
   // Landing
   startQuizBtn: document.getElementById('startQuizBtn'),
   aboutNavBtn: document.getElementById('aboutNavBtn'),
+  materialsNavBtn: document.getElementById('materialsNavBtn'),
   
   // About
   backFromAboutBtn: document.getElementById('backFromAboutBtn'),
   aboutFromQuizBtn: document.getElementById('aboutFromQuizBtn'),
+  
+  // Materials
+  backFromMaterialsBtn: document.getElementById('backFromMaterialsBtn'),
   
   // Quiz
   nameInput: document.getElementById('nameInput'),
@@ -214,6 +219,8 @@ const elements = {
   progressFill: document.getElementById('progressFill'),
   questionText: document.getElementById('questionText'),
   optionsContainer: document.getElementById('optionsContainer'),
+  feedbackContainer: document.getElementById('feedbackContainer'),
+  explanationContainer: document.getElementById('explanationContainer'),
   prevBtn: document.getElementById('prevBtn'),
   nextBtn: document.getElementById('nextBtn'),
   
@@ -249,7 +256,15 @@ elements.aboutNavBtn.addEventListener('click', () => {
   showSection('about');
 });
 
+elements.materialsNavBtn.addEventListener('click', () => {
+  showSection('materials');
+});
+
 elements.backFromAboutBtn.addEventListener('click', () => {
+  showSection('landing');
+});
+
+elements.backFromMaterialsBtn.addEventListener('click', () => {
   showSection('landing');
 });
 
@@ -266,7 +281,7 @@ elements.beginQuizBtn.addEventListener('click', () => {
     elements.quizInterface.classList.remove('hidden');
     startQuiz();
   } else {
-    alert('Please enter your name to continue.');
+    alert('Per favore inserisci il tuo nome per continuare.');
   }
 });
 
@@ -308,15 +323,25 @@ function displayQuestion() {
   const questionNum = appState.currentQuestionIndex + 1;
   
   // Update counter and progress
-  elements.questionCounter.textContent = `Question ${questionNum} of ${quizData.length}`;
+  elements.questionCounter.textContent = `Domanda ${questionNum} di ${quizData.length}`;
   elements.progressFill.style.width = `${(questionNum / quizData.length) * 100}%`;
   
   // Update difficulty badge
-  elements.difficultyBadge.textContent = question.difficulty;
-  elements.difficultyBadge.className = `difficulty-badge ${question.difficulty}`;
+  const difficultyLabels = {
+    'facile': 'Facile',
+    'media': 'Media',
+    'difficile': 'Difficile'
+  };
+  elements.difficultyBadge.textContent = difficultyLabels[question.difficulty] || question.difficulty;
+  const difficultyClass = question.difficulty === 'facile' ? 'easy' : question.difficulty === 'media' ? 'medium' : 'hard';
+  elements.difficultyBadge.className = `difficulty-badge ${difficultyClass}`;
   
   // Update question text
   elements.questionText.textContent = question.question;
+  
+  // Hide feedback and explanation for new question
+  elements.feedbackContainer.classList.add('hidden');
+  elements.explanationContainer.classList.add('hidden');
   
   // Display options
   elements.optionsContainer.innerHTML = '';
@@ -324,15 +349,30 @@ function displayQuestion() {
     const button = document.createElement('button');
     button.className = 'option-btn';
     button.textContent = option;
+    button.dataset.index = index;
     
     // Check if this option was previously selected
-    if (appState.userAnswers[appState.currentQuestionIndex] === index) {
-      button.classList.add('selected');
+    const userAnswer = appState.userAnswers[appState.currentQuestionIndex];
+    if (userAnswer !== null) {
+      button.disabled = true;
+      if (userAnswer === index) {
+        button.classList.add('selected');
+      }
+      if (index === question.correct) {
+        button.classList.add('correct');
+      } else if (userAnswer === index && userAnswer !== question.correct) {
+        button.classList.add('incorrect');
+      }
     }
     
     button.addEventListener('click', () => selectAnswer(index));
     elements.optionsContainer.appendChild(button);
   });
+  
+  // Show feedback and explanation if question was already answered
+  if (appState.userAnswers[appState.currentQuestionIndex] !== null) {
+    showFeedback(appState.userAnswers[appState.currentQuestionIndex] === question.correct, question);
+  }
   
   // Update navigation buttons
   elements.prevBtn.disabled = appState.currentQuestionIndex === 0;
@@ -341,9 +381,9 @@ function displayQuestion() {
   if (appState.userAnswers[appState.currentQuestionIndex] !== null) {
     elements.nextBtn.disabled = false;
     if (appState.currentQuestionIndex === quizData.length - 1) {
-      elements.nextBtn.innerHTML = 'Finish <span class="btn-icon">✓</span>';
+      elements.nextBtn.innerHTML = 'Termina <span class="btn-icon">✓</span>';
     } else {
-      elements.nextBtn.innerHTML = 'Next <span class="btn-icon">→</span>';
+      elements.nextBtn.innerHTML = 'Prossima <span class="btn-icon">→</span>';
     }
   } else {
     elements.nextBtn.disabled = true;
@@ -356,23 +396,64 @@ function selectAnswer(optionIndex) {
     return;
   }
   
+  const question = quizData[appState.currentQuestionIndex];
+  const isCorrect = optionIndex === question.correct;
+  
   appState.userAnswers[appState.currentQuestionIndex] = optionIndex;
   
-  // Update UI
+  // Disable all buttons after selection
   const optionButtons = elements.optionsContainer.querySelectorAll('.option-btn');
-  optionButtons.forEach((btn, index) => {
-    if (index === optionIndex) {
-      btn.classList.add('selected');
-    }
+  optionButtons.forEach((btn) => {
+    btn.disabled = true;
   });
+  
+  // Apply visual feedback to selected button
+  const selectedButton = optionButtons[optionIndex];
+  selectedButton.classList.add('selected');
+  
+  if (isCorrect) {
+    selectedButton.classList.add('correct');
+  } else {
+    selectedButton.classList.add('incorrect');
+    // Also highlight the correct answer
+    optionButtons[question.correct].classList.add('correct');
+  }
+  
+  // Show immediate feedback
+  setTimeout(() => {
+    showFeedback(isCorrect, question);
+  }, 500);
   
   // Enable next button
   elements.nextBtn.disabled = false;
   
   // Update button text for last question
   if (appState.currentQuestionIndex === quizData.length - 1) {
-    elements.nextBtn.innerHTML = 'Finish <span class="btn-icon">✓</span>';
+    elements.nextBtn.innerHTML = 'Termina <span class="btn-icon">✓</span>';
+  } else {
+    elements.nextBtn.innerHTML = 'Prossima <span class="btn-icon">→</span>';
   }
+}
+
+function showFeedback(isCorrect, question) {
+  // Show feedback message
+  elements.feedbackContainer.classList.remove('hidden');
+  elements.feedbackContainer.className = 'feedback-container';
+  
+  if (isCorrect) {
+    elements.feedbackContainer.classList.add('correct');
+    elements.feedbackContainer.innerHTML = '<span class="feedback-icon">✓</span> Esatto! ✨';
+  } else {
+    elements.feedbackContainer.classList.add('incorrect');
+    elements.feedbackContainer.innerHTML = '<span class="feedback-icon">✗</span> Sbagliato!';
+  }
+  
+  // Show explanation
+  elements.explanationContainer.classList.remove('hidden');
+  elements.explanationContainer.innerHTML = `
+    <div class="explanation-title">Spiegazione:</div>
+    <div class="explanation-text">${question.explanation}</div>
+  `;
 }
 
 function finishQuiz() {
@@ -424,13 +505,13 @@ function calculateResults() {
   // Performance message
   let message = '';
   if (percentage < 40) {
-    message = 'Keep studying! Networking fundamentals take time to master. Review the concepts and try again!';
+    message = 'Continua a studiare! I fondamentali di rete richiedono tempo per essere padroneggiati. Rivedi i concetti e riprova!';
   } else if (percentage < 70) {
-    message = 'Good effort! You have a solid foundation. A bit more practice and you\'ll be an expert!';
+    message = 'Buon lavoro! Hai una base solida. Un po\' più di pratica e sarai un esperto!';
   } else if (percentage < 85) {
-    message = 'Great job! You have a strong understanding of Data Link Layer concepts!';
+    message = 'Ottimo lavoro! Hai una forte comprensione dei concetti del Data Link Layer!';
   } else {
-    message = 'Outstanding! You\'re a networking expert. Excellent knowledge of Ethernet, PoE, and Wireshark!';
+    message = 'Eccezionale! Sei un esperto di networking. Eccellente conoscenza di Ethernet, PoE e Wireshark!';
   }
   elements.performanceMessage.textContent = message;
   
@@ -461,7 +542,7 @@ function saveResults() {
     percentage: percentage,
     totalQuestions: quizData.length,
     timestamp: new Date().toISOString(),
-    category: 'Data Link Layer - Ethernet & PoE',
+    category: 'Strato Data Link - Ethernet & PoE',
     answers: quizData.map((question, index) => ({
       question: question.question,
       userAnswer: question.options[appState.userAnswers[index]] || 'Not answered',
@@ -477,7 +558,7 @@ function saveResults() {
   const a = document.createElement('a');
   const timestamp = new Date().toISOString().split('T')[0];
   a.href = url;
-  a.download = `datalink-quiz-results-${appState.userName.replace(/\s+/g, '-')}-${timestamp}.json`;
+  a.download = `quiz-risultati-${appState.userName.replace(/\s+/g, '-')}-${timestamp}.json`;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
@@ -488,11 +569,11 @@ function shareResults() {
   const correctAnswers = appState.userAnswers.filter((answer, index) => answer === quizData[index].correct).length;
   const percentage = Math.round((correctAnswers / quizData.length) * 100);
   
-  const shareText = `🎯 Data Link Layer Quiz Results\n\nName: ${appState.userName}\nScore: ${correctAnswers}/${quizData.length} (${percentage}%)\nCategory: Ethernet, PoE, Wireshark & MAC Addressing\n\nCreated by Perplexity AI through Labs\n`;
+  const shareText = `🎯 Risultati Quiz Strato Data Link\n\nNome: ${appState.userName}\nPunteggio: ${correctAnswers}/${quizData.length} (${percentage}%)\nCategoria: Ethernet, PoE, Wireshark & Indirizzamento MAC\n\nCreato in collaborazione tra Perplexity AI e Amedeo\n`;
   
   // Copy to clipboard
   navigator.clipboard.writeText(shareText).then(() => {
-    alert('Results copied to clipboard! You can now share them.');
+    alert('Risultati copiati negli appunti! Ora puoi condividerli.');
   }).catch(() => {
     // Fallback for older browsers
     const textarea = document.createElement('textarea');
@@ -501,7 +582,7 @@ function shareResults() {
     textarea.select();
     document.execCommand('copy');
     document.body.removeChild(textarea);
-    alert('Results copied to clipboard! You can now share them.');
+    alert('Risultati copiati negli appunti! Ora puoi condividerli.');
   });
 }
 
