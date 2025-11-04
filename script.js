@@ -2,7 +2,7 @@
 const GITHUB_API = 'https://api.github.com';
 const REPO_OWNER = 'Amy1403x';
 const REPO_NAME = 'Sistemi-e-Reti-Amedeo';
-const GITHUB_TOKEN = 'YOUR_GITHUB_TOKEN_HERE'; // Replace with your GitHub token
+const GITHUB_TOKEN = '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'; // Replace with your GitHub token
 const QUIZ_LABEL = 'quiz-score';
 
 // Quiz Data
